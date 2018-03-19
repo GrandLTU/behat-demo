@@ -1,14 +1,14 @@
 Behat
 =====
 
-To run tests start web server on port 8000
-`bin/console server:start 127.0.0.1:8000`
+Tests without javascript can be run right away
 
-Now it is possible to run behat tests without javascript
-`vendor/bin/behat -p default`
+`vendor/bin/behat -p no_js`
 
-To run tests with javascript start chromedriver
-`chromedriver --url-base=wd/hub --port=4444`
+To run tests with javascript start web server and chromedriver
+ - `bin/console server:start 127.0.0.1:8000`
+ - `chromedriver --url-base=wd/hub --port=4444`
 
-And run tests
+Now it is possible to run behat tests with javascript
+
 `vendor/bin/behat -p javascript`
